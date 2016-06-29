@@ -1,6 +1,6 @@
-FROM alpine:3.2
+FROM alpine:3.4
 
-ENV DOCKER_VERSION 1.9.1
+ENV DOCKER_VERSION 1.10.3
 
 RUN apk update && \
     apk fetch procps sysstat dmidecode && \
