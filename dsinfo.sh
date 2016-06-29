@@ -227,7 +227,7 @@ esac
 
 # inspect, logs
 for container in $(docker ps -a -n 20 -q); do
-  docker logs ${container} | tail -n ${LOGLINES} >> ${TD}/logs/${container}.log
+  docker logs 2>&1 ${container} | tail -n ${LOGLINES} >> ${TD}/logs/${container}.log
   docker inspect ${container} >> ${TD}/inspect/${container}.txt
 done
 
