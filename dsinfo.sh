@@ -150,7 +150,7 @@ if [ $BATCH != true ]; then
 
         echo
         echo "Debug logging enabled and daemon restarted."
-        echo "Run the 'dsinf.sh' data collection script again when you're ready ..."
+        echo "Run the 'dsinfo.sh' data collection script again when you're ready ..."
         exit 1
         ;;
       *)
