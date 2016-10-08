@@ -21,7 +21,7 @@ while getopts ":t:o:l:b" opt; do
       TARFILE="$OPTARG"
       ;;
     l)
-      LOGLINES="OPTARG"
+      LOGLINES="$OPTARG"
       ;;
     \?)
       echo "Invalid option: -$OPTARG" >&2
