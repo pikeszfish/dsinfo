@@ -1,12 +1,12 @@
 FROM alpine:3.4
 
-ENV DOCKER_VERSION 1.10.3
+ENV DOCKER_VERSION 1.12.2
 
 RUN apk update && \
     apk fetch procps sysstat dmidecode && \
-    apk add procps sysstat dmidecode
+    apk add procps sysstat dmidecode curl
 
-ADD https://get.docker.com/builds/Linux/x86_64/docker-${DOCKER_VERSION} /usr/local/bin/docker
+RUN curl -fsSLO https://get.docker.com/builds/Linux/x86_64/docker-1.12.2.tgz && tar --strip-components=1 -xvzf docker-1.12.2.tgz -C /usr/local/bin
 RUN chmod +x /usr/local/bin/docker
 
 ADD https://raw.githubusercontent.com/docker/docker/master/contrib/check-config.sh /check-config.sh
